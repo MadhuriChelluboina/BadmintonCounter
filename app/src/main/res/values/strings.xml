@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Badminton Counter</string>
+    <string name="title_resetBtn">RESET</string>
+    <string name="title_TeamAPointBtn">+1 POINT</string>
+    <string name="title_TeamBPointBtn">+1 POINT</string>
+    <string name="defaultScore_TeamA">0</string>
+    <string name="defaultScore_TeamB">0</string>
+    <string name="title_TeamA">Team A</string>
+    <string name="title_TeamB">Team B</string>
+</resources>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/score_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:alpha="1">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            tools:context=".MainActivity">
+
+            <TextView
+                android:id="@+id/teamA_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="16dp"
+                android:gravity="center"
+                android:text="@string/title_TeamA"
+                android:textColor="#000"
+                android:textSize="28sp"
+                app:fontFamily="sans-serif-medium" />
+
+            <TextView
+                android:id="@+id/teamA_score_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/defaultScore_TeamA"
+                android:textColor="#000"
+                android:textSize="60sp"
+                app:fontFamily="sans-serif-light" />
+
+            <Button
+                android:id="@+id/teamA_point_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="24dp"
+                android:textColor="#000"
+                android:background="@color/colorAccent"
+                android:onClick="addPointForTeamA"
+                android:text="@string/title_TeamAPointBtn" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_marginTop="16dp"
+            android:layout_width="3dp"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary"/>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            tools:context=".MainActivity">
+
+            <TextView
+                android:id="@+id/teamB_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="16dp"
+                android:gravity="center"
+                android:text="@string/title_TeamB"
+                android:textColor="#000"
+                android:textSize="28sp"
+                app:fontFamily="sans-serif-medium" />
+
+            <TextView
+                android:id="@+id/teamB_score_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/defaultScore_TeamB"
+                android:textColor="#000"
+                android:textSize="60sp"
+                app:fontFamily="sans-serif-light" />
+
+            <Button
+                android:id="@+id/teamB_point_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="24dp"
+                android:onClick="addPointForTeamB"
+                android:background="@color/colorAccent"
+                android:textColor="#000"
+                android:text="@string/title_TeamBPointBtn" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/reset_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/score_layout"
+        android:layout_centerInParent="true"
+        android:textColor="#000"
+        android:background="@color/colorAccent"
+        android:text="@string/title_resetBtn"
+        android:onClick="resetAllScores"/>
+    <ImageButton
+        android:id="@+id/winner_imageButtonView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:background="@drawable/winner"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/score_layout"
+        android:visibility="invisible"
+        />
+    <TextView
+        android:id="@+id/teamImg_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/winner_imageButtonView"
+        android:textColor="#000"
+        android:padding="8dp"
+        tools:text="Team A"
+        android:visibility="visible"
+        tools:background="@color/colorAccent"
+        android:layout_centerHorizontal="true"
+        android:textAppearance="@android:style/TextAppearance.Large"/>
+    <TextView
+        android:id="@+id/snackBar_view"
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        tools:text="hello snack bar"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"/>
+</RelativeLayout>
+</ScrollView>
